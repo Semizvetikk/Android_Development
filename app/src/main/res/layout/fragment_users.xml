@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yesterday"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Карточка 1 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"
+            android:backgroundTint="@android:color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/distanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/distance1"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/emailText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mail1"
+                    android:textSize="14sp"
+                    android:textColor="@color/purple_500"
+                    app:layout_constraintTop_toTopOf="@id/distanceText"
+                    app:layout_constraintBottom_toBottomOf="@id/distanceText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/durationText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time1"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@id/distanceText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/activityText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/surfing"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toBottomOf="@id/durationText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/timeAgoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ago"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Карточка 2 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"
+            android:backgroundTint="@android:color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/distanceText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/distance2"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/emailText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mail2"
+                    android:textSize="14sp"
+                    android:textColor="@color/purple_500"
+                    app:layout_constraintTop_toTopOf="@id/distanceText2"
+                    app:layout_constraintBottom_toBottomOf="@id/distanceText2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/durationText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time2"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@id/distanceText2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/activityText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/swing"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toBottomOf="@id/durationText2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/timeAgoText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ago"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Карточка 3 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"
+            android:backgroundTint="@android:color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/distanceText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/distance3"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/emailText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mail3"
+                    android:textSize="14sp"
+                    android:textColor="@color/purple_500"
+                    app:layout_constraintTop_toTopOf="@id/distanceText3"
+                    app:layout_constraintBottom_toBottomOf="@id/distanceText3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/durationText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time3"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@id/distanceText3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/activityText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bike"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toBottomOf="@id/durationText3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/timeAgoText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ago"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

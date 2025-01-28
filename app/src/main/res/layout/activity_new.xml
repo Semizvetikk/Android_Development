@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Карта -->
+    <com.yandex.mapkit.mapview.MapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Первое состояние: Выбор активности -->
+    <LinearLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="402dp"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        app:behavior_peekHeight="130dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <TextView
+            android:id="@+id/tvGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/go"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+        <!-- Контейнер для кнопок выбора активности -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp">
+
+            <!-- Кнопка "Бег" -->
+            <Button
+                android:id="@+id/btnRun"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue"
+                android:padding="12dp"
+                android:text="@string/run"
+                android:textColor="@android:color/white" />
+
+            <!-- Кнопка "Велосипед" -->
+            <Button
+                android:id="@+id/btnBike"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/green"
+                android:padding="12dp"
+                android:text="@string/bike"
+                android:textColor="@android:color/white" />
+
+            <!-- Кнопка "Ходьба" -->
+            <Button
+                android:id="@+id/btnWalk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/orange"
+                android:padding="12dp"
+                android:text="@string/walk"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <!-- Кнопка "Начать" -->
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/purple_500"
+            android:layout_margin="16dp"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
+    <!-- Второе состояние: Запись маршрута -->
+    <LinearLayout
+        android:id="@+id/recordingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@android:color/white">
+
+        <!-- Надпись с выбранной активностью -->
+        <TextView
+            android:id="@+id/tvSelectedActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="@string/active"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+        <!-- Карта для записи маршрута -->
+        <com.yandex.mapkit.mapview.MapView
+            android:id="@+id/mapviewRecording"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Круглая кнопка для остановки записи -->
+        <Button
+            android:id="@+id/btnStopRecording"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/ic_flag"
+            android:textSize="24sp"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
