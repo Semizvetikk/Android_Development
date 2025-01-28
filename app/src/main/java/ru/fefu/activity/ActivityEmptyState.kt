@@ -19,7 +19,6 @@ class ActivityEmptyState : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_empty_state)
 
-        // Находим TabLayout и ViewPager2 для верхних вкладок
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
         val titleText = findViewById<TextView>(R.id.titleText)
